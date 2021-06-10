@@ -48,6 +48,7 @@
     "commit:dirty": "yarn run commit --no-verify",
     "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx,.md,.mdx .",
     "eslint:fix": "eslint --cache --fix --ext .js,.jsx,.ts,.tsx,.md,.mdx .",
+    "prepublishOnly": "yarn run ci",
     "prettier": "prettier --check \"**/*.{json,html,md,mdx}\"",
     "prettier:fix": "prettier --write \"**/*.{json,html,md,mdx}\"",
     "stylelint": "stylelint --cache --aei \"**/*.{css,scss,sass,less,wxss}\"",
