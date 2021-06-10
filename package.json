@@ -1,0 +1,143 @@
+{
+  "name": "@fastcms/stylelint-config",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Shared @stylelint configs for web development projects of @fastcms.",
+  "keywords": [
+    "css-in-js",
+    "fastcms",
+    "linter",
+    "miniprogram",
+    "prettier",
+    "stylelint",
+    "stylelint-config"
+  ],
+  "homepage": "https://npm.im/@fastcms/stylelint-config",
+  "bugs": {
+    "url": "https://github.com/fastcms/stylelint-config/issues",
+    "email": "hello@fastcms.dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fastcms/stylelint-config"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Ritchie Zhu",
+    "email": "laozhu.me@gmail.com",
+    "url": "https://laozhu.me"
+  },
+  "contributors": [
+    {
+      "name": "Ritchie Zhu",
+      "email": "laozhu.me@gmail.com",
+      "url": "https://laozhu.me"
+    }
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "miniprogram.js",
+    "lib/*",
+    "plugin/*",
+    "util/*"
+  ],
+  "scripts": {
+    "ci": "run-s prettier eslint stylelint test",
+    "commit": "git-cz",
+    "commit:dirty": "yarn run commit --no-verify",
+    "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx,.md,.mdx .",
+    "eslint:fix": "eslint --cache --fix --ext .js,.jsx,.ts,.tsx,.md,.mdx .",
+    "prettier": "prettier --check \"**/*.{json,html,md,mdx}\"",
+    "prettier:fix": "prettier --write \"**/*.{json,html,md,mdx}\"",
+    "stylelint": "stylelint --cache --aei \"**/*.{css,scss,sass,less,wxss}\"",
+    "stylelint:fix": "stylelint --cache --fix --aei \"**/*.{css,scss,sass,less,wxss}\"",
+    "test": "jest --cache --passWithNoTests"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,md,mdx}": "yarn run eslint",
+    "**/*.{css,scss,sass,less,wxss}": "yarn run stylelint",
+    "**/*.{json,html,md,mdx}": "yarn run prettier"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "browserslist": [
+    "last 1 chrome version",
+    "last 1 edge version",
+    "last 1 firefox version",
+    "last 1 safari version",
+    "last 1 ios version",
+    "last 1 android version"
+  ],
+  "prettier": {
+    "printWidth": 100,
+    "quoteProps": "consistent",
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "eslintConfig": {
+    "extends": "@fastcms",
+    "root": true
+  },
+  "eslintIgnore": [
+    "coverage",
+    "node_modules"
+  ],
+  "stylelint": {
+    "extends": "./index.js"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "roots": [
+      "<rootDir>"
+    ],
+    "testMatch": [
+      "**/__tests__/**/*.[jt]s?(x)",
+      "**/?(*.)+(spec|test).[jt]s?(x)"
+    ],
+    "transform": {
+      "\\.tsx?$": "ts-jest",
+      "\\.jsx?$": "babel-jest"
+    },
+    "verbose": true
+  },
+  "dependencies": {
+    "doiuse": "^4.4.1",
+    "postcss": "^8.3.1",
+    "stylelint-order": "^4.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.5",
+    "@fastcms/eslint-config": "^1.4.1",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.12.2",
+    "babel-jest": "^27.0.2",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.28.0",
+    "husky": "^6.0.0",
+    "jest": "^27.0.4",
+    "lint-staged": "^11.0.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "2.3.1",
+    "prettier-plugin-packagejson": "^2.2.11",
+    "stylelint": "^13.13.1",
+    "ts-jest": "^27.0.3",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
+  },
+  "peerDependencies": {
+    "stylelint": "^13.13.1"
+  },
+  "engines": {
+    "node": ">=14.17.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org",
+    "tag": "latest"
+  }
+}
