@@ -4,6 +4,7 @@ module.exports = {
   extends: [
     './lib/common.js',
     './lib/css-modules.js',
+    './lib/miniprogram.js',
     './lib/property-order.js',
     './lib/prettier.js',
   ],

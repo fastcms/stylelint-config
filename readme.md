@@ -21,25 +21,13 @@ $ yarn add --dev @fastcms/stylelint-config stylelint
 
 After installation, add following contents to your `.stylelintrc.json` or the `stylelint` entry of `package.json` file.
 
-### Default Project
-
 ```json
 {
   "extends": "@fastcms"
 }
 ```
 
-This stylelint config is used for web projects.
-
-### MiniProgram Project
-
-```json
-{
-  "extends": "@fastcms/stylelint-config/miniprogram"
-}
-```
-
-This stylelint config is used for wechat miniprogram projects.
+This stylelint config is used for web or miniprogram projects.
 
 ## Stylelint Scripts
 
