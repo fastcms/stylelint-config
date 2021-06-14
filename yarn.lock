@@ -1053,14 +1053,16 @@
     strip-json-comments "^3.1.1"
 
 "@fastcms/eslint-config@^1.4.2":
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/@fastcms/eslint-config/-/eslint-config-1.4.2.tgz#fb29c70ca103f144e51a505720a2ce74fb98d2b1"
-  integrity sha512-H5674UqtxebW9MID2pTv2GwlP1LpCXL5sPknTbhDHSqHpD10hBN1+sWQFOmwdu1gD1inynHdIdIy5E/vnI6Yjg==
+  version "1.4.4"
+  resolved "https://registry.yarnpkg.com/@fastcms/eslint-config/-/eslint-config-1.4.4.tgz#12035aafe89779c97a6b17a5c451480c19ecae22"
+  integrity sha512-+jM86/p1azy5+oS6g0MGF3Z9QebpmiHcYvf9Dn79G8pq1VFRQkPsI+aA8rl67+q0etTJ1KSfTM3A8HXQzg0P3A==
   dependencies:
     "@babel/eslint-parser" "^7.14.5"
     "@babel/eslint-plugin" "^7.14.5"
     "@babel/plugin-proposal-class-properties" "^7.14.5"
     "@babel/plugin-proposal-decorators" "^7.14.5"
+    "@babel/plugin-proposal-private-methods" "^7.14.5"
+    "@babel/plugin-syntax-top-level-await" "^7.14.5"
     "@babel/preset-env" "^7.14.5"
     "@babel/preset-react" "^7.14.5"
     "@typescript-eslint/eslint-plugin" "^4.26.1"
