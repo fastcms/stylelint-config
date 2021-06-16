@@ -1,6 +1,6 @@
 {
   "name": "@fastcms/stylelint-config",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": false,
   "description": "Shared @stylelint configs for web development projects of @fastcms.",
   "keywords": [
@@ -37,16 +37,14 @@
   "main": "index.js",
   "files": [
     "index.js",
-    "lib/*",
-    "plugin/*",
-    "util/*"
+    "lib/*"
   ],
   "scripts": {
     "ci": "run-s prettier eslint stylelint test",
     "commit": "git-cz",
     "commit:dirty": "yarn run commit --no-verify",
-    "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx,.md,.mdx .",
-    "eslint:fix": "eslint --cache --fix --ext .js,.jsx,.ts,.tsx,.md,.mdx .",
+    "eslint": "eslint --cache --ext .js,.mjs,.jsx,.ts,.tsx,.md,.mdx .",
+    "eslint:fix": "eslint --cache --fix --ext .js,.mjs,.jsx,.ts,.tsx,.md,.mdx .",
     "prepublishOnly": "yarn run ci",
     "prettier": "prettier --check \"**/*.{json,html,md,mdx}\"",
     "prettier:fix": "prettier --write \"**/*.{json,html,md,mdx}\"",
@@ -55,7 +53,7 @@
     "test": "jest --cache --passWithNoTests"
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx,md,mdx}": "yarn run eslint",
+    "**/*.{js,mjs,jsx,ts,tsx,md,mdx}": "yarn run eslint",
     "**/*.{css,scss,sass,less,wxss}": "yarn run stylelint",
     "**/*.{json,html,md,mdx}": "yarn run prettier"
   },
@@ -105,13 +103,13 @@
     "verbose": true
   },
   "dependencies": {
-    "doiuse": "^4.4.1",
-    "postcss": "^8.3.2",
+    "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
+    "stylelint-no-unsupported-browser-features": "^5.0.1",
     "stylelint-order": "^4.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.5",
-    "@fastcms/eslint-config": "^1.4.2",
+    "@babel/core": "^7.14.6",
+    "@fastcms/eslint-config": "^1.5.3",
     "@types/jest": "^26.0.23",
     "@types/node": "^15.12.2",
     "babel-jest": "^27.0.2",

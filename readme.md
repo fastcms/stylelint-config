@@ -1,4 +1,4 @@
-# @fastcms/stylelint-config
+# stylelint-config
 
 ![NPM Package Version](https://img.shields.io/npm/v/@fastcms/stylelint-config) ![Peer Stylelint Version](https://img.shields.io/npm/dependency-version/@fastcms/stylelint-config/peer/stylelint) ![Node.js Version](https://img.shields.io/node/v/@fastcms/stylelint-config) ![Dependencies](https://img.shields.io/david/fastcms/stylelint-config) ![Dev Dependencies](https://img.shields.io/david/dev/fastcms/stylelint-config) ![NPM Weekly Downloads](https://img.shields.io/npm/dw/@fastcms/stylelint-config) ![GitHub CI Workflow](https://github.com/fastcms/stylelint-config/actions/workflows/main.yml/badge.svg)
 

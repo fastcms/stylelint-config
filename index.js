@@ -10,8 +10,8 @@ module.exports = {
   ],
 
   plugins: [
-    './plugin/declaration-block-no-ignored-properties.js',
-    './plugin/no-unsupported-browser-features.js',
+    'stylelint-declaration-block-no-ignored-properties',
+    'stylelint-no-unsupported-browser-features',
   ],
 
   rules: {
@@ -19,7 +19,7 @@ module.exports = {
     'plugin/no-unsupported-browser-features': [
       true,
       {
-        ignorePartialSupport: true,
+        ignore: [],
       },
     ],
   },
