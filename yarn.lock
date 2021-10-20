@@ -1399,10 +1399,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fastcms/eslint-config@^1.7.4":
-  version "1.7.4"
-  resolved "https://registry.yarnpkg.com/@fastcms/eslint-config/-/eslint-config-1.7.4.tgz#e35831e718a7b69194b136355d7d80f3bf172d6e"
-  integrity sha512-C+0gwgz6C2rKWOo4N9jNOCCfmBgMknMXDAqEXV33tCujIk6TkiQ63XVP7XgULFBeVaxJwnE4eWtSwXXEJ+yCcg==
+"@fastcms/eslint-config@^1.7.5":
+  version "1.7.5"
+  resolved "https://registry.yarnpkg.com/@fastcms/eslint-config/-/eslint-config-1.7.5.tgz#fe4c43a6568e29df8c7af0faa5a5a20ad8cd7ee7"
+  integrity sha512-YhRXw1QlK4jMCBDSTrCCS51JXcaFrdBrMY3n4GZ3JipjD7G/0QQLxUmX4DcuMPJH2XRWyq1lerLdsGILaMS+sg==
   dependencies:
     "@babel/eslint-parser" "^7.15.8"
     "@babel/eslint-plugin" "^7.14.5"
@@ -1752,7 +1752,7 @@
   resolved "https://registry.yarnpkg.com/@swc/core-win32-x64-msvc/-/core-win32-x64-msvc-1.2.101.tgz#aba710f49929a0e207aee89912af0d4d1e90bc0c"
   integrity sha512-zhflYomebNSfEoanRyzGojYChw4qy4/Ta+sG2qbZrXdUhZHN3jYH2KIqTsBdTVYPbJ0rhHSXTh5ld7aG8of+Zw==
 
-"@swc/core@^1.2.100":
+"@swc/core@^1.2.101":
   version "1.2.101"
   resolved "https://registry.yarnpkg.com/@swc/core/-/core-1.2.101.tgz#51802d6b7c9f34876f3f7c28aa80dd578856efbc"
   integrity sha512-2+Age9Z4IQSU9dydXB4EaEDlS5W6sG5UEvRUZEPEHbZY1dnUZWlxTIIgm0h8XATVfddQ31W2+s7ZUFczRdEyVQ==
@@ -1771,10 +1771,10 @@
     "@swc/core-win32-ia32-msvc" "1.2.101"
     "@swc/core-win32-x64-msvc" "1.2.101"
 
-"@swc/jest@^0.2.4":
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/@swc/jest/-/jest-0.2.4.tgz#dbbda1511faa96dcf5d768b8d182ddabe3d6f72a"
-  integrity sha512-+50IX4juKZUK3j/J6FTDFiI+upAlfbbxgVM4dkt0bx3m4njFat1z+f2pqwAj7BvhK5XFiBMpVQ6dVgvZKUHKgw==
+"@swc/jest@^0.2.5":
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/@swc/jest/-/jest-0.2.5.tgz#2c9a84974208524e70192f1ff1c090cf6252c292"
+  integrity sha512-7Vb+RXuXWk47QbOPJ3hwSIMCwUVylp7JUhUITVtMe3hMoBv0IMfVCML9p6jiRhoBAzjzYDPPteKoVxSUJjFNPA==
 
 "@tootallnate/once@1":
   version "1.1.2"
