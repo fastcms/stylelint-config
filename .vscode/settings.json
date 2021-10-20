@@ -1,15 +1,15 @@
 {
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
     "source.fixAll.stylelint": true
   },
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
+
+  "prettier.useEditorConfig": true,
+
   "eslint.alwaysShowStatus": true,
-  "eslint.options": {
-    "extensions": [".js", ".jsx", ".md", ".mdx", ".ts", ".tsx"]
-  },
   "eslint.packageManager": "yarn",
   "eslint.run": "onSave",
   "eslint.validate": [
@@ -20,10 +20,9 @@
     "typescript",
     "typescriptreact"
   ],
-  "eslint.workingDirectories": [],
-  "prettier.useEditorConfig": true,
-  "stylelint.packageManager": "yarn",
+
   "css.validate": false,
   "scss.validate": false,
-  "less.validate": false
+  "less.validate": false,
+  "stylelint.packageManager": "yarn"
 }

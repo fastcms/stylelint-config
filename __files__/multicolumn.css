@@ -1,0 +1,12 @@
+main {
+  display: grid;
+  grid-template-areas:
+    'app-bar app-bar app-bar'
+    'server-list study-list series-list'
+    'server-list image-list viewport-lite';
+  grid-template-rows: auto 1fr 1fr;
+  grid-template-columns: auto 1fr 1fr;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}

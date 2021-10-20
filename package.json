@@ -1,6 +1,6 @@
 {
   "name": "@fastcms/stylelint-config",
-  "version": "1.2.3",
+  "version": "1.3.0",
   "private": false,
   "description": "Shared @stylelint configs for web development projects of @fastcms.",
   "keywords": [
@@ -37,29 +37,32 @@
   "main": "index.js",
   "files": [
     "index.js",
-    "lib/*"
+    "lib/*",
+    "util/*"
   ],
   "scripts": {
-    "ci": "run-s prettier eslint stylelint test",
+    "ci": "run-s prettier eslint stylelint test:ci",
+    "clean": "rimraf .DS_Store .eslintcache .stylelintcache coverage",
     "commit": "git-cz",
-    "commit:dirty": "yarn run commit --no-verify",
-    "eslint": "eslint --cache --ext .js,.mjs,.jsx,.ts,.tsx,.md,.mdx .",
-    "eslint:fix": "eslint --cache --fix --ext .js,.mjs,.jsx,.ts,.tsx,.md,.mdx .",
+    "commit:dirty": "git-cz --no-verify",
+    "eslint": "eslint --cache --ext .js,.cjs,.mjs,.jsx,.ts,.tsx,.md,.mdx .",
+    "eslint:fix": "eslint --cache --fix --ext .js,.cjs,.mjs,.jsx,.ts,.tsx,.md,.mdx .",
     "prepublishOnly": "yarn run ci",
     "prettier": "prettier --check \"**/*.{json,html,md,mdx}\"",
     "prettier:fix": "prettier --write \"**/*.{json,html,md,mdx}\"",
-    "stylelint": "stylelint --cache --aei \"**/*.{css,scss,sass,less,wxss}\"",
-    "stylelint:fix": "stylelint --cache --fix --aei \"**/*.{css,scss,sass,less,wxss}\"",
-    "test": "jest --cache --passWithNoTests"
+    "stylelint": "stylelint --cache --aei \"**/*.{css,scss,less,wxss,jsx,tsx}\"",
+    "stylelint:fix": "stylelint --cache --fix --aei \"**/*.{css,scss,less,wxss,jsx,tsx}\"",
+    "test": "jest --cache --passWithNoTests  --watch",
+    "test:ci": "jest --ci --passWithNoTests"
   },
   "lint-staged": {
-    "**/*.{js,mjs,jsx,ts,tsx,md,mdx}": "yarn run eslint",
-    "**/*.{css,scss,sass,less,wxss}": "yarn run stylelint",
+    "**/*.{js,cjs,mjs,jsx,ts,tsx,md,mdx}": "yarn run eslint",
+    "**/*.{css,scss,less,wxss,jsx,tsx}": "yarn run stylelint",
     "**/*.{json,html,md,mdx}": "yarn run prettier"
   },
   "config": {
     "commitizen": {
-      "path": "cz-conventional-changelog"
+      "path": "cz-emoji"
     }
   },
   "browserslist": [
@@ -81,14 +84,20 @@
     "root": true
   },
   "eslintIgnore": [
+    "__files__",
     "coverage",
     "node_modules"
   ],
-  "stylelint": {
-    "extends": "./index.js"
-  },
   "jest": {
     "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.js",
+      "**/*.ts",
+      "!**/*.d.ts",
+      "!__files__/**",
+      "!coverage/**",
+      "!node_modules/**"
+    ],
     "roots": [
       "<rootDir>"
     ],
@@ -97,40 +106,51 @@
       "**/?(*.)+(spec|test).[jt]s?(x)"
     ],
     "transform": {
-      "\\.tsx?$": "ts-jest",
-      "\\.jsx?$": "babel-jest"
+      "^.+\\.[jt]sx?$": "@swc/jest"
     },
     "verbose": true
   },
   "dependencies": {
-    "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
-    "stylelint-no-unsupported-browser-features": "^5.0.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.4.0",
+    "stylelint-no-unsupported-browser-features": "^5.0.2",
     "stylelint-order": "^4.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.6",
-    "@fastcms/eslint-config": "^1.5.8",
-    "@types/jest": "^26.0.24",
-    "@types/node": "^16.3.2",
-    "babel-jest": "^27.0.6",
+    "@babel/core": "^7.15.8",
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
+    "@fastcms/eslint-config": "^1.7.2",
+    "@swc/core": "^1.2.100",
+    "@swc/jest": "^0.2.4",
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.11.1",
+    "@types/react": "^17.0.30",
+    "@types/react-dom": "^17.0.9",
+    "@types/stylelint": "^13.13.3",
+    "babel-plugin-module-resolver": "^4.1.0",
     "commitizen": "^4.2.4",
-    "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^7.30.0",
-    "husky": "^7.0.1",
-    "jest": "^27.0.6",
-    "lint-staged": "^11.0.1",
+    "cz-emoji": "^1.3.1",
+    "eslint": "^7.32.0",
+    "husky": "^7.0.2",
+    "jest": "^27.3.1",
+    "lint-staged": "^11.2.3",
     "npm-run-all": "^4.1.5",
-    "prettier": "2.3.2",
-    "prettier-plugin-packagejson": "^2.2.11",
+    "prettier": "2.4.1",
+    "prettier-plugin-packagejson": "^2.2.13",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rimraf": "^3.0.2",
     "stylelint": "^13.13.1",
-    "ts-jest": "^27.0.3",
-    "typescript": "^4.3.5"
+    "typescript": "^4.4.4"
   },
   "peerDependencies": {
+    "prettier": "2.4.1",
     "stylelint": "^13.13.1"
   },
   "engines": {
-    "node": ">=14.17.3"
+    "node": ">=16"
   },
   "publishConfig": {
     "access": "public",

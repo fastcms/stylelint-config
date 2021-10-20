@@ -1,0 +1,15 @@
+$red: red;
+$green: green;
+$blue: blue;
+
+@media screen {
+  main: {
+    display: none;
+    background-color: $green;
+  }
+}
+
+main {
+  display: flex;
+  background-color: $red;
+}

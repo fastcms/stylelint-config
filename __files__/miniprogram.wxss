@@ -1,0 +1,33 @@
+@import 'assets/styles/icons.wxss';
+
+unknown {
+  color: #fff;
+}
+
+view {
+  box-sizing: border-box;
+}
+
+open-data {
+  display: block;
+  overflow: hidden;
+}
+
+.page {
+  position: relative;
+  min-height: 100vh;
+  overflow: auto;
+  background-color: #ededed;
+}
+
+.hoverClass {
+  opacity: 0.8;
+}
+
+.placeholderClass {
+  color: #888;
+}
+
+button.weui-btn:not([size='mini']) {
+  width: 100%;
+}
