@@ -1,6 +1,6 @@
 {
   "name": "@fastcms/stylelint-config",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "private": false,
   "description": "Shared @stylelint configs for web development projects of @fastcms.",
   "keywords": [
@@ -121,7 +121,7 @@
     "@babel/core": "^7.15.8",
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
-    "@fastcms/eslint-config": "^1.7.2",
+    "@fastcms/eslint-config": "^1.7.4",
     "@swc/core": "^1.2.100",
     "@swc/jest": "^0.2.4",
     "@types/jest": "^27.0.2",

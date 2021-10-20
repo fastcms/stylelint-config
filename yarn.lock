@@ -1399,10 +1399,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fastcms/eslint-config@^1.7.2":
-  version "1.7.2"
-  resolved "https://registry.yarnpkg.com/@fastcms/eslint-config/-/eslint-config-1.7.2.tgz#5071fd410805bb2caa0790469f154b948fa92db6"
-  integrity sha512-2x1v0JtkMCM6Aoa38JmMM6zc7FZXRibs9gQE4o7GxeTfE4RZMhfA8+xEv4q0SVD0xQHDXnH1M/ygz54ajkBkJw==
+"@fastcms/eslint-config@^1.7.4":
+  version "1.7.4"
+  resolved "https://registry.yarnpkg.com/@fastcms/eslint-config/-/eslint-config-1.7.4.tgz#e35831e718a7b69194b136355d7d80f3bf172d6e"
+  integrity sha512-C+0gwgz6C2rKWOo4N9jNOCCfmBgMknMXDAqEXV33tCujIk6TkiQ63XVP7XgULFBeVaxJwnE4eWtSwXXEJ+yCcg==
   dependencies:
     "@babel/eslint-parser" "^7.15.8"
     "@babel/eslint-plugin" "^7.14.5"
