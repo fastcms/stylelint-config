@@ -8,8 +8,6 @@ module.exports = {
     'stylelint-config-standard',
 
     './lib/common.js',
-    './lib/css-modules.js',
-    './lib/miniprogram.js',
     './lib/property-order.js',
 
     'stylelint-config-prettier',
@@ -29,4 +27,62 @@ module.exports = {
       },
     ],
   },
+
+  ignoreFiles: ['**/*.js', '**/*.ts'],
+
+  overrides: [
+    {
+      files: ['**/*.module.css', '**/*.module.scss', '**/*.module.less'],
+      rules: {
+        'selector-pseudo-class-no-unknown': [
+          true,
+          {
+            ignorePseudoClasses: ['export', 'import', 'global', 'local', 'external'],
+          },
+        ],
+
+        'property-no-unknown': [
+          true,
+          {
+            ignoreProperties: ['composes', 'compose-with'],
+            ignoreSelectors: [':export', /^:import/],
+          },
+        ],
+
+        'at-rule-no-unknown': [
+          true,
+          {
+            ignoreAtRules: ['apply', 'responsive', 'screen', 'tailwind', 'value', 'variants'],
+          },
+        ],
+      },
+    },
+
+    {
+      files: ['**/*.wxss'],
+      customSyntax: 'css',
+      rules: {
+        'unit-no-unknown': [
+          true,
+          {
+            ignoreUnits: ['rpx'],
+          },
+        ],
+
+        'selector-type-no-unknown': [
+          true,
+          {
+            ignore: ['custom-elements'],
+            ignoreTypes: ['camera', 'editor', 'icon', 'navigator', 'page', 'slider', 'swiper'],
+          },
+        ],
+      },
+    },
+
+    {
+      files: ['**/*.jsx', '**/*.tsx'],
+      processors: ['stylelint-processor-styled-components'],
+      extends: ['stylelint-config-styled-components'],
+    },
+  ],
 };

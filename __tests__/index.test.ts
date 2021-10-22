@@ -7,6 +7,11 @@ describe('Test Stylelint Config', () => {
     await expect(getLintMessage(`${filesRoot}/no-file-to-test.css`)).rejects.toThrow(Error);
   });
 
+  it('css:function-url-quotes', async () => {
+    const lintResult = await getLintMessage(`${filesRoot}/function-url-quotes.css`);
+    expect(lintResult.warnings[0].rule).toEqual('function-url-quotes');
+  });
+
   it('css:no-ignored-properties', async () => {
     const lintResult = await getLintMessage(`${filesRoot}/no-ignored-properties.css`);
     expect(lintResult.warnings[0].rule).toEqual('plugin/declaration-block-no-ignored-properties');
@@ -18,8 +23,8 @@ describe('Test Stylelint Config', () => {
   });
 
   it('css:css-modules', async () => {
-    const lintResult = await getLintMessage(`${filesRoot}/css-modules.css`);
-    expect(lintResult.warnings.length).toEqual(0);
+    const lintResult = await getLintMessage(`${filesRoot}/index.module.css`);
+    expect(lintResult.warnings[0].rule).toEqual('selector-class-pattern');
   });
 
   it('scss:order', async () => {

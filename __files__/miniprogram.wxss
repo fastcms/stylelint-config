@@ -20,11 +20,11 @@ open-data {
   background-color: #ededed;
 }
 
-.hoverClass {
+.hover-class {
   opacity: 0.8;
 }
 
-.placeholderClass {
+.placeholder-class {
   color: #888;
 }
 
