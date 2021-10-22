@@ -12,10 +12,17 @@ import config from '../.stylelintrc.json';
  * @throws Get lint message error
  */
 async function getLintMessage(fileToLint: string): Promise<LintResult> {
+  let customSyntax: string | undefined;
+
+  if (fileToLint.endsWith('.jsx') || fileToLint.endsWith('.tsx')) {
+    customSyntax = '@stylelint/postcss-css-in-js';
+  }
+
   try {
     const linterResult = await lint({
       code: fs.readFileSync(`./${fileToLint}`, 'utf-8'),
       config,
+      customSyntax,
     });
 
     return JSON.parse(linterResult.output)[0] as LintResult;

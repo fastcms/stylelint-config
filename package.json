@@ -1,6 +1,6 @@
 {
   "name": "@fastcms/stylelint-config",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "private": false,
   "description": "Shared @stylelint configs for web development projects of @fastcms.",
   "keywords": [
@@ -118,13 +118,14 @@
     "verbose": true
   },
   "dependencies": {
+    "@stylelint/postcss-css-in-js": "^0.37.2",
+    "postcss": "^8.3.11",
+    "postcss-syntax": "^0.36.2",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard": "^23.0.0",
-    "stylelint-config-styled-components": "^0.1.1",
     "stylelint-declaration-block-no-ignored-properties": "^2.4.0",
     "stylelint-no-unsupported-browser-features": "^5.0.2",
-    "stylelint-order": "^5.0.0",
-    "stylelint-processor-styled-components": "^1.10.0"
+    "stylelint-order": "^5.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",

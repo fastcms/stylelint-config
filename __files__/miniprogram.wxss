@@ -21,7 +21,7 @@ open-data {
 }
 
 .hover-class {
-  opacity: 0.8;
+  opacity: 80%;
 }
 
 .placeholder-class {

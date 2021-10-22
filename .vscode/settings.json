@@ -26,17 +26,5 @@
   "less.validate": false,
 
   "stylelint.packageManager": "yarn",
-  "stylelint.validate": ["css", "scss", "less", "postcss", "javascriptreact", "typescriptreact"],
-
-  "[javascriptreact]": {
-    "editor.codeActionsOnSave": {
-      "source.fixAll.stylelint": false
-    }
-  },
-
-  "[typescriptreact]": {
-    "editor.codeActionsOnSave": {
-      "source.fixAll.stylelint": false
-    }
-  }
+  "stylelint.validate": ["css", "scss", "less", "postcss", "javascriptreact", "typescriptreact"]
 }
