@@ -14,7 +14,7 @@ $ npm info "@fastcms/stylelint-config" peerDependencies optionalDependencies
 $ npx install-peerdeps --dev @fastcms/stylelint-config
 
 # Install using yarn
-$ yarn add --dev @fastcms/stylelint-config prettier stylelint
+$ yarn add --dev @fastcms/stylelint-config postcss prettier stylelint
 ```
 
 ## Usage
