@@ -60,7 +60,6 @@ module.exports = {
 
     {
       files: ['**/*.wxss'],
-      customSyntax: 'css',
       rules: {
         'unit-no-unknown': [
           true,
