@@ -1,6 +1,6 @@
 {
   "name": "@fastcms/stylelint-config",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "private": false,
   "description": "Shared @stylelint configs for web development projects of @fastcms.",
   "keywords": [
@@ -127,11 +127,11 @@
     "stylelint-order": "^5.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.8",
+    "@babel/core": "^7.16.0",
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
-    "@fastcms/eslint-config": "^1.8.3",
-    "@swc/core": "^1.2.103",
+    "@fastcms/eslint-config": "^1.8.4",
+    "@swc/core": "^1.2.106",
     "@swc/jest": "^0.2.5",
     "@types/jest": "^27.0.2",
     "@types/node": "^16.11.6",
