@@ -37,6 +37,7 @@ module.exports = {
       files: ['**/*.jsx', '**/*.tsx'],
       customSyntax: '@stylelint/postcss-css-in-js',
       rules: {
+        'selector-class-pattern': null,
         'value-keyword-case': null,
       },
     },
