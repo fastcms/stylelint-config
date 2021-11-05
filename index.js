@@ -34,6 +34,14 @@ module.exports = {
 
   overrides: [
     {
+      files: ['**/*.less'],
+      customSyntax: 'postcss-less',
+    },
+    {
+      files: ['**/*.scss'],
+      customSyntax: 'postcss-scss',
+    },
+    {
       files: ['**/*.jsx', '**/*.tsx'],
       customSyntax: '@stylelint/postcss-css-in-js',
       rules: {
