@@ -1,8 +1,11 @@
-# stylelint-config
+#  [DEPRECATED] stylelint-config
 
 ![NPM Package Version](https://img.shields.io/npm/v/@fastcms/stylelint-config) ![Peer Stylelint Version](https://img.shields.io/npm/dependency-version/@fastcms/stylelint-config/peer/stylelint) ![Node.js Version](https://img.shields.io/node/v/@fastcms/stylelint-config) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) ![NPM Weekly Downloads](https://img.shields.io/npm/dw/@fastcms/stylelint-config) ![GitHub CI Workflow](https://github.com/fastcms/stylelint-config/actions/workflows/main.yml/badge.svg)
 
 > Shared @stylelint configs for web development projects of @fastcms.
+
+**Go to <https://github.com/fastcms/fastcms/tree/master/tools/stylelint-config> for latest version.**
+
 
 ## Installation
 
